@@ -11,6 +11,8 @@ const generateRefreshToken = (payload) => {
     return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: process.env.REFRESH_TOKEN_EXPIRES });
 };
 
+
+// Kiểm tra tính hợp lệ của token
 const verifyToken = (token) => {
     try {
         return jwt.verify(token, SECRET_KEY);
