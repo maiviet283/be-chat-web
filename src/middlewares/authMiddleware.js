@@ -5,7 +5,7 @@ const authMiddleware = (req, res, next) => {
     if (!token) return res.status(401).json({ message: 'Unauthorized' });
 
     const decoded = verifyToken(token);
-    if (!decoded) return res.status(403).json({ message: 'Invalid token' });
+    if (!decoded) return res.status(403).json({ message: 'Token Không Hợp Lệ' });
 
     req.user = decoded;
     next();
