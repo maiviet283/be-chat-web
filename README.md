@@ -1,6 +1,6 @@
-# be-chat-app
+# TalkZone
 
-`be-chat-app` là hệ thống backend cho một ứng dụng chat thời gian thực giống như Zalo, được xây dựng với **Node.js**, **Express**, **MongoDB**, **JWT**, và **WebSocket (Socket.IO)**. Ứng dụng cho phép người dùng kết bạn, tạo nhóm, và trò chuyện cá nhân hoặc trong nhóm.
+`TalkZone` là hệ thống backend cho một ứng dụng chat thời gian thực giống như Zalo, được xây dựng với **Node.js**, **Express**, **MongoDB**, **JWT**, và **WebSocket (Socket.IO)**. Ứng dụng cho phép người dùng kết bạn, tạo nhóm, và trò chuyện cá nhân hoặc trong nhóm.
 
 ## 🚀 Tính năng chính
 
