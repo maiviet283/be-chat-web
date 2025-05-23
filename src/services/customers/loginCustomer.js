@@ -26,13 +26,18 @@ const loginCustomer = async (data) => {
         throw new Error('Mật khẩu không đúng');
     }
 
-    const payload = {
+    const accessPayload = {
         id: user._id,
-        username: user.username
+        username: user.username,
     };
 
-    const accessToken = generateAccessToken(payload);
-    const refreshToken = generateRefreshToken(payload);
+    const refreshPayload = {
+        id: user._id,
+        type: "refresh"
+    };
+
+    const accessToken = generateAccessToken(accessPayload);
+    const refreshToken = generateRefreshToken(refreshPayload);
 
     return {
         accessToken,

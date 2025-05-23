@@ -8,4 +8,12 @@ const getCustomerProfile = async (userId) => {
     return customer;
 };
 
-module.exports = { getCustomerProfile };
+const getUsernameById = async (userId) => {
+    const username = await Customer.findById(userId).select('_id username')
+    if (!username) {
+        throw new Error('Username Không Tồn Tại')
+    }
+    return username
+}
+
+module.exports = { getCustomerProfile, getUsernameById };
