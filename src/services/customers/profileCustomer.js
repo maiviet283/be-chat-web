@@ -9,11 +9,11 @@ const getCustomerProfile = async (userId) => {
 };
 
 const getUsernameById = async (userId) => {
-    const username = await Customer.findById(userId).select('username -_id')
-    if (!username) {
-        throw new Error('Username Không Tồn Tại')
+    const user = await Customer.findById(userId).select('username -_id');
+    if (!user || !user.username) {
+        throw new Error('Username không tồn tại');
     }
-    return username.username
+    return user.username;
 }
 
 module.exports = { getCustomerProfile, getUsernameById };
